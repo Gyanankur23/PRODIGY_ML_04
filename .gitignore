@@ -24,8 +24,8 @@ wheels/
 *.egg
 
 # TensorFlow
-hand_gesture_model.h5
-class_labels.npy
+# hand_gesture_model.h5
+# class_labels.npy
 *.pb
 *.ckpt
 
