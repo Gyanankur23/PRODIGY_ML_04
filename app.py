@@ -75,7 +75,9 @@ def main():
         pil_image = Image.open(uploaded_file)
         st.image(pil_image, caption="Uploaded Image", use_column_width=True)
         
-        # Convert to array for prediction
+        # Convert to RGB if grayscale and then to array for prediction
+        if pil_image.mode != 'RGB':
+            pil_image = pil_image.convert('RGB')
         img_array = image.img_to_array(pil_image.resize((128, 128)))
         
         # Predict button
