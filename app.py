@@ -72,11 +72,11 @@ def main():
     
     if uploaded_file is not None:
         # Display uploaded image
-        image = Image.open(uploaded_file)
-        st.image(image, caption="Uploaded Image", use_column_width=True)
+        pil_image = Image.open(uploaded_file)
+        st.image(pil_image, caption="Uploaded Image", use_column_width=True)
         
         # Convert to array for prediction
-        img_array = image.img_to_array(image.resize((128, 128)))
+        img_array = image.img_to_array(pil_image.resize((128, 128)))
         
         # Predict button
         if st.button("Predict Gesture", type="primary"):
