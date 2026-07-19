@@ -105,7 +105,7 @@ def main():
                         )
                     
                     # Progress bar for confidence
-                    st.progress(confidence)
+                    st.progress(float(confidence))
                     
                     # Display all probabilities
                     st.markdown("---")
